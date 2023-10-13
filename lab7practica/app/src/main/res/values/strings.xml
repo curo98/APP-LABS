@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">lab7-practica</string>
+
+    <color name="colorPrimary">#448AFF</color>
+    <color name="colorPrimaryDark">#3B406E</color>
+    <color name="colorAccent">#448AFF</color>
 </resources>
