@@ -7,6 +7,34 @@
     android:orientation="vertical"
     tools:context=".MainActivity3">
 
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="SALIR"
+        android:textColor="@color/black"
+        android:id="@+id/btnSalir"/>
+
+    <Button
+        android:id="@+id/btnIdioma"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="IDIOMA"
+        android:textColor="@color/black"/>
+
+    <Button
+        android:id="@+id/btnIdiomaRb"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="IDIOMA RB"
+        android:textColor="@color/black"/>
+
+    <Button
+        android:id="@+id/btnIdiomaCS"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="IDIOMA CS"
+        android:textColor="@color/black"/>
+
     <TextView
         android:id="@+id/tvPrueba3"
         android:textStyle="bold"
