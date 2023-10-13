@@ -6,11 +6,28 @@
         android:id="@+id/config"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:title="Configuracion" />
+        android:title="Configuracion" ></item>
     <item
         android:id="@+id/info"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:title="Informacion" />
+    <item
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:title="otros" >
+        <menu
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <item
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:title="conf1" />
+            <item
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:title="conf2" />
+        </menu>
+    </item>
 
 </menu>

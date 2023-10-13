@@ -1,10 +1,15 @@
 package iberoplast.pe.lab7_practica;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.view.ContextMenu;
 import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.SubMenu;
+import android.view.View;
 import android.widget.TextView;
 
 public class MainActivity2 extends AppCompatActivity {
@@ -21,6 +26,34 @@ public class MainActivity2 extends AppCompatActivity {
         setContentView(R.layout.activity_main2);
 
         tvPrueba2 = findViewById(R.id.tvPrueba2);
+        registerForContextMenu(tvPrueba2);
+    }
+
+    @Override
+    public void onCreateContextMenu(ContextMenu menu, View v, ContextMenu.ContextMenuInfo menuInfo){
+        super.onCreateContextMenu(menu, v, menuInfo);
+
+        MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.menu.menu_etiqueta, menu);
+    }
+
+    @Override
+    public boolean onContextItemSelected(@NonNull MenuItem item){
+        if (item.getItemId() == R.id.opc1){
+            tvPrueba2.setText("Etiqueta opcion 1 pulsada");
+            return true;
+        }
+
+        if (item.getItemId() == R.id.opc1){
+            tvPrueba2.setText("Etiqueta opcion 1 pulsada");
+            return true;
+        }
+
+        if (item.getItemId() == R.id.opc2){
+            tvPrueba2.setText("Etiqueta opcion 2 pulsada");
+            return true;
+        }
+        return super.onContextItemSelected(item);
     }
 
     @Override
@@ -32,5 +65,26 @@ public class MainActivity2 extends AppCompatActivity {
         smnu.add(Menu.NONE, SMNU_OPC1, Menu.NONE, "Opcion 3.1");
         smnu.add(Menu.NONE, SMNU_OPC2, menu.NONE, "Opcion 3.2");
         return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item){
+        switch (item.getItemId()){
+            case MNU_OPC1:
+                tvPrueba2.setText("Opcion 1 pulsada!");
+                return true;
+            case MNU_OPC2:
+                tvPrueba2.setText("Opcion 2 pulsada!");
+                return true;
+            case SMNU_OPC1:
+                tvPrueba2.setText("Opcion 3.1 pulsada!");
+                return true;
+            case SMNU_OPC2:
+                tvPrueba2.setText("Opcion 3.2 pulsada!");
+                return true;
+            default:
+                return super.onOptionsItemSelected(item);
+
+        }
     }
 }
